@@ -5,6 +5,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Header = () => {
     const {user, logOUt} = useContext(AuthContext);
+    console.log(user);
     const handelLouOut = () =>{
         logOUt()
         .then(result =>{})
@@ -20,10 +21,10 @@ const Header = () => {
                     <Nav className="">
                         <Link to="/">Home</Link>
                         <Link className='mx-2' to="/blogs">BLogs</Link>
-                        {!!user && <Link to="/user">User</Link>}
                         <Link className='mx-2' to="/register">Register</Link>
-                        {user?<Link onClick={handelLouOut} to="/">Logout</Link>:
+                        {user?<Link className='mx-2' onClick={handelLouOut} to="/">Logout</Link>:
                         <Link to="/login">Login</Link>}
+                        {!!user && <Link to="/user">{user.email}</Link>}
                     </Nav>
                 </Container>
             </Navbar>
