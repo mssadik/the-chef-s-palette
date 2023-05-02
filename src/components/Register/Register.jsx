@@ -34,7 +34,7 @@ const Register = () => {
             <div className='form-container'>
                 <form onSubmit={handelRegister}>
                     <input type="text" name="name" id="" placeholder='Your Name' required /><br /><br />
-                    {/* <input type="photoUrl" name="photoUrl" id="" placeholder='Your Photo Url' required /><br /><br /> */}
+                    <input type="url" name="photoUrl" id="" placeholder='Your Photo URL' required /><br /><br />
                     <input type="email" name="email" id="" placeholder='Your Email' /><br /><br />
                     <input type="password" name="password" id="" placeholder='Your Password' required/><br /><br />
                     <p className='text-danger'>{error}</p>
