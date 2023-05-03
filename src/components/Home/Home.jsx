@@ -17,7 +17,7 @@ const Home = () => {
 
             <div style={{ backgroundColor: "#d3d8db" }}>
             <div  className="container" >
-                <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: '#333', textAlign: 'center', paddingTop: '50px', borderBottom: "2px solid" }}>
+                <h2 style={{ fontSize: '30px', marginBottom: '50px', fontWeight: 'bold', color: '#333', textAlign: 'center', paddingTop: '50px', borderBottom: "2px solid" }}>
                     Meet Our Talented Chefs
                 </h2>
 
@@ -27,9 +27,9 @@ const Home = () => {
                         chefData.map((chef) => (
                             <div key={chef.id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div className="card">
-                                    <img src={chef.picture} alt={chef.name} className="card-img-top" />
+                                    <img src={chef.chef_img} alt={chef.name} className="card-img-top" />
                                     <div className="card-body">
-                                        <h5 className="card-title">{chef.name}</h5>
+                                        <h5 className="card-title">{chef.chef_name}</h5>
                                         <p className="card-text">
                                             Years of Experience: {chef.years_of_experience}
                                             <br />

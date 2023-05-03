@@ -13,7 +13,7 @@ import Home from './components/Home/Home.jsx';
 import Register from './components/Register/Register.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Login from './components/Login/Login.jsx';
-import ChefDetails from './components/ChefDetails .jsx';
+import ChefDetails from './components/ChefDetails/ChefDetails .jsx';
 
 const router = createBrowserRouter([
   {
