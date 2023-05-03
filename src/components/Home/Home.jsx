@@ -3,9 +3,11 @@ import Banner from '../Banner/Banner';
 import { Link, useLoaderData } from 'react-router-dom';
 
 
+
 const Home = () => {
 
     const chefData = useLoaderData();
+    // console.log(chefData);
 
     return (
         <div>
@@ -33,8 +35,7 @@ const Home = () => {
                                             <br />
                                             Likes: {chef.likes}
                                         </p>
-
-                                        <Link to={`/chef/${chef.id}`}  className="btn btn-primary">View Details</Link>
+                                        <Link to={`/chefDetails/${chef.id}`}><button className="btn btn-primary" >View Details</button></Link>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +44,7 @@ const Home = () => {
                         <div>Loading...</div>
                     )}
                 </div>
-
+                
             </div>
             </div>
         </div>

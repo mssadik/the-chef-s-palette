@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const ChefDetails  = () => {
-  const details = useLoaderData();
-  console.log(details);
+  const [details, setDetails] = useState('');
+  const data = useLoaderData();
+  console.log("........",data);
+  const {name} = data;
+  
   return (
     <div>
-        <h2>chef deatial comming</h2>
+        <h2>{name}</h2>
     </div>
   );
 };
