@@ -13,6 +13,7 @@ import Home from './components/Home/Home.jsx';
 import Register from './components/Register/Register.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Login from './components/Login/Login.jsx';
+import ChefDetails from './components/ChefDetails .jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,11 +23,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: async () => {
-          const response = await fetch('http://localhost:5000/chefData');
-          const data = await response.json();
-          return data;
-        },
+        loader: () => fetch('http://localhost:5000/chefData')
+      },
+      {
+        path: 'chef/:chefId',
+        element: <ChefDetails></ChefDetails>,
+        loader: ({params}) => fetch(`http://localhost:5173/chef/${params.chefId}`)
       },
       {
         path: '/blogs',

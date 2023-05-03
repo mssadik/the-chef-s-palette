@@ -1,14 +1,14 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-const ChefDetails = ({ chef }) => {
+const ChefDetails  = () => {
+  const details = useLoaderData();
+  console.log(details);
   return (
     <div>
-      <h3>{chef.name}</h3>
-      <p>Years of Experience: {chef.years_of_experience}</p>
-      <p>Likes: {chef.likes}</p>
-      {/* Add more details as needed */}
+        <h2>chef deatial comming</h2>
     </div>
   );
 };
 
-export default ChefDetails;
+export default ChefDetails ;
