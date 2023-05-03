@@ -18,7 +18,7 @@ const Banner = () => {
         paddingLeft: '20px', // Optional: Add left padding for the text
       }}
     >
-      <h2 className='fs-1'> <span className='fs-20'>Welcome to The</span>  <br /> Chef's Palette</h2>
+      <h2  className='fs-1 container'> <span className='fs-20'>Welcome to The</span>  <br /> Chef's Palette</h2>
     </div>
   );
 };

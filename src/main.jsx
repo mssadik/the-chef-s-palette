@@ -21,7 +21,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: async () => {
+          const response = await fetch('http://localhost:5000/chefData');
+          const data = await response.json();
+          return data;
+        },
       },
       {
         path: '/blogs',
