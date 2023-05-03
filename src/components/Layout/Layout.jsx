@@ -1,17 +1,17 @@
-// import React from 'react';
-// import Home from '../Home/Home';
-// import { Outlet } from 'react-router-dom';
-// import Footer from '../Footer/Footer';
-// import Header from '../Header/Header';
+import React from 'react';
+import Home from '../Home/Home';
+import { Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
-// const Layout = () => {
-//     return (
-//         <div>
-//             <Header></Header>
-//             <Outlet></Outlet>
-//             <Footer></Footer>
-//         </div>
-//     );
-// };
+const Layout = () => {
+    return (
+        <div>
+            <Header></Header>
+            <Outlet></Outlet>
+            <Footer></Footer>
+        </div>
+    );
+};
 
-// export default Layout;
+export default Layout;
