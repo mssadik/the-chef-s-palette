@@ -1,6 +1,5 @@
 import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/chefData')
+        loader: () => fetch('https://the-chef-s-paletter-server-mssadik.vercel.app/chefData')
       },
       {
         path: '/blogs',
@@ -40,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/chefDetails/:id',
         element: <ChefDetails></ChefDetails>,
-        loader: ({params}) => fetch (`http://localhost:5000/chefData/${params.id}`)
+        loader: ({params}) => fetch (`https://the-chef-s-paletter-server-mssadik.vercel.app/chefData/${params.id}`)
       }
     ]
   },

@@ -1,0 +1,40 @@
+ [
+      {
+        "id": 1,
+        "name": "Spaghetti Bolognese",
+        "img": "https://example.com/spaghetti-bolognese.jpg",
+        "description": "A classic Italian dish featuring al dente spaghetti noodles topped with a rich and flavorful meat sauce."
+      },
+      {
+        "id": 2,
+        "name": "Chicken Parmesan",
+        "img": "https://example.com/chicken-parmesan.jpg",
+        "description": "Breaded and fried chicken cutlets topped with marinara sauce and melted cheese, creating a delightful combination of flavors."
+      },
+      {
+        "id": 3,
+        "name": "Chocolate Chip Cookies",
+        "img": "https://example.com/chocolate-chip-cookies.jpg",
+        "description": "Soft and chewy cookies with a perfect balance of sweet and chocolatey flavors, enjoyed by people of all ages."
+      },
+      {
+        "id": 4,
+        "name": "Caprese Salad",
+        "img": "https://example.com/caprese-salad.jpg",
+        "description": "A refreshing salad made with ripe tomatoes, fresh mozzarella cheese, and fragrant basil leaves, drizzled with balsamic glaze."
+      },
+      {
+        "id": 5,
+        "name": "Beef Stir-Fry",
+        "img": "https://example.com/beef-stir-fry.jpg",
+        "description": "Tender strips of beef cooked with colorful vegetables in a savory soy-based sauce, perfect for a quick and delicious meal."
+      },
+      {
+        "id": 6,
+        "name": "Blueberry Pancakes",
+        "img": "https://example.com/blueberry-pancakes.jpg",
+        "description": "Fluffy pancakes studded with juicy blueberries, served with maple syrup and a dollop of whipped cream, making breakfast extra special."
+      }
+    ]
+  
+  
