@@ -120,7 +120,10 @@ console.log(data);
                                         <div className="card-body">
                                             <h5 className="card-title">{d.name}</h5>
                                             <p>{d.description}</p>
-                                            <Link ><button className="btn btn-primary" >Book Now</button></Link>
+                                            <div className='d-flex justify-content-between'>
+                                                <button className="btn btn-primary" >Book Now</button>
+                                                <p className='fw-bold'>{d.price}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

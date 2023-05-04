@@ -2,38 +2,44 @@
       {
         "id": 1,
         "name": "Spaghetti Bolognese",
-        "img": "https://example.com/spaghetti-bolognese.jpg",
-        "description": "A classic Italian dish featuring al dente spaghetti noodles topped with a rich and flavorful meat sauce."
+        "img": "https://media.istockphoto.com/id/1340097110/photo/wooden-table-served-with-plates-with-salad-and-snacks-on-the-open-terrace.jpg?s=612x612&w=is&k=20&c=bbpBWaW65C6mPC9CdGyrxVcfaMZDykGj03J53siRlk0=",
+        "description": "A classic Italian dish featuring al dente spaghetti noodles topped with a rich and flavorful meat sauce.",
+        "price": "$200"
       },
       {
         "id": 2,
         "name": "Chicken Parmesan",
-        "img": "https://example.com/chicken-parmesan.jpg",
-        "description": "Breaded and fried chicken cutlets topped with marinara sauce and melted cheese, creating a delightful combination of flavors."
+        "img": "https://media.istockphoto.com/id/1155466334/photo/dining-table-set-up-with-a-variety-of-freshly-made-food-served-on-table-with-wine-ready-for.jpg?s=1024x1024&w=is&k=20&c=6sbmYe5oVjWz7hQSr5BnB6PBNEW-EkR19tx2jLGUEPM=",
+        "description": "Breaded and fried chicken cutlets topped with marinara sauce and melted cheese, creating a delightful combination of flavors.",
+        "price": "$350"
       },
       {
         "id": 3,
         "name": "Chocolate Chip Cookies",
-        "img": "https://example.com/chocolate-chip-cookies.jpg",
-        "description": "Soft and chewy cookies with a perfect balance of sweet and chocolatey flavors, enjoyed by people of all ages."
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFJoZ6zHv3yeqfxe9HTa0Agj3wbK2rlsAufU3KIuBAqYP5aj6GQ94S49TxLstwyUvblE&usqp=CAU",
+        "description": "Soft and chewy cookies with a perfect balance of sweet and chocolatey flavors, enjoyed by people of all ages.",
+        "price": "$280"
       },
       {
         "id": 4,
         "name": "Caprese Salad",
-        "img": "https://example.com/caprese-salad.jpg",
-        "description": "A refreshing salad made with ripe tomatoes, fresh mozzarella cheese, and fragrant basil leaves, drizzled with balsamic glaze."
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTdB01M9TcBs3n8ifsNsmQ_M4BxKIA7z3gEG7eQpZRrRU5s3V07Ikyx3VRHNtowkkDPPo&usqp=CAU",
+        "description": "A refreshing salad made with ripe tomatoes, fresh mozzarella cheese, and fragrant basil leaves, drizzled with balsamic glaze.",
+        "price": "$500"
       },
       {
         "id": 5,
         "name": "Beef Stir-Fry",
-        "img": "https://example.com/beef-stir-fry.jpg",
-        "description": "Tender strips of beef cooked with colorful vegetables in a savory soy-based sauce, perfect for a quick and delicious meal."
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Uy6cNx9ZzvUEDjBHW29ysrUu-ADMnZ5oJFM0lxQ_WtOrYPiFOLIfd-IAar-8kIne1nc&usqp=CAU",
+        "description": "Tender strips of beef cooked with colorful vegetables in a savory soy-based sauce, perfect for a quick and delicious meal.",
+        "price": "$360"
       },
       {
         "id": 6,
         "name": "Blueberry Pancakes",
-        "img": "https://example.com/blueberry-pancakes.jpg",
-        "description": "Fluffy pancakes studded with juicy blueberries, served with maple syrup and a dollop of whipped cream, making breakfast extra special."
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTdB01M9TcBs3n8ifsNsmQ_M4BxKIA7z3gEG7eQpZRrRU5s3V07Ikyx3VRHNtowkkDPPo&usqp=CAU",
+        "description": "Fluffy pancakes studded with juicy blueberries, served with maple syrup and a dollop of whipped cream, ",
+        "price": "$299"
       }
     ]
   
