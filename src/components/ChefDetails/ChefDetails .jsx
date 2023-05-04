@@ -2,6 +2,7 @@
 import { useLoaderData } from 'react-router-dom';
 import './ChefDetails.css'
 import { Button, Card } from 'react-bootstrap';
+import { FaRegThumbsUp } from 'react-icons/fa';
 
 const ChefDetails = () => {
 
@@ -50,7 +51,7 @@ const ChefDetails = () => {
             </Card.Text>
             <div className="d-flex justify-content-between">
               <Button variant="primary">Favorite</Button>
-              <p>{rating}</p>
+              <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>{rating}</p>
             </div>
           </Card.Body>
         </Card>
@@ -71,7 +72,7 @@ const ChefDetails = () => {
             </Card.Text>
             <div className="d-flex justify-content-between">
               <Button variant="primary">Favorite</Button>
-              <p>{rating}</p>
+              <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-sharp-half"></i>{rating}</p>
             </div>
           </Card.Body>
         </Card>
@@ -91,7 +92,7 @@ const ChefDetails = () => {
             </Card.Text>
             <div className="d-flex justify-content-between">
               <Button variant="primary">Favorite</Button>
-              <p>{rating}</p>
+              <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>{rating}</p>
             </div>
           </Card.Body>
         </Card>
