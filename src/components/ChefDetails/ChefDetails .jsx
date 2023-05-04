@@ -7,7 +7,7 @@ const ChefDetails = () => {
 
   const details = useLoaderData();
   const { chef_name, chef_img, short_bio, recipes_name, recipes_img, years_of_experience, number_of_recipes, likes, description, ingredients,cooking_method  , rating } = details;
-  console.log("....",recipes_img);
+  console.log(recipes_img);
 
 
   const ingredientElements = ingredients.map((ingredient, index) => (

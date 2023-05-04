@@ -10,16 +10,16 @@ import { Carousel } from 'react-bootstrap';
 
 
 const Home = () => {
-const [data, setData] = useState(null);
+const [datas, setDatas] = useState(null);
+
 
 useEffect(() => {
-  fetch('../../../src/data/data.json')
+  fetch('https://the-chef-s-paletter-server-mssadik.vercel.app/data')
     .then(res => res.json())
-    .then(data => setData(data))
+    .then(data => setDatas(data))
     .catch(error => console.log(error));
 }, []);
 
-console.log(data);
 
 
     const chefData = useLoaderData();
@@ -112,8 +112,9 @@ console.log(data);
             </div>
             
             <div className="row container mx-auto" style={{ marginTop: "" }}>
-                        {data ? (
-                            data.map(( d) => (
+                <h2 className='text-center'>Services</h2>
+                        {datas ? (
+                            datas.map(( d) => (
                                 <div key={d.id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
                                     <div className="card">
                                         <img src={d.img} alt={d.name} className="card-img-top" />

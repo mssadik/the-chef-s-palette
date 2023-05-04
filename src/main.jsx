@@ -13,6 +13,8 @@ import Register from './components/Register/Register.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Login from './components/Login/Login.jsx';
 import ChefDetails from './components/ChefDetails/ChefDetails .jsx';
+import PrivetaRout from './PrivetaRoute/PrivetaRout';
+import Error from './components/Error/Error';
 
 const router = createBrowserRouter([
   {
@@ -38,8 +40,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/chefDetails/:id',
-        element: <ChefDetails></ChefDetails>,
+        element: <PrivetaRout><ChefDetails></ChefDetails></PrivetaRout>,
         loader: ({params}) => fetch (`https://the-chef-s-paletter-server-mssadik.vercel.app/chefData/${params.id}`)
+      },
+      {
+        path: '*',
+        element: <Error></Error>
       }
     ]
   },

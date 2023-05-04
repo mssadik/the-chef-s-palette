@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate()
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+  console.log('login page location',location);
   const { signUser, googleLogin, githubLogin } = useContext(AuthContext);
 
   const handelLogin = (event) => {
@@ -17,6 +21,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         setSuccess("User Login Successful");
+        navigate(from, {replace: true})
         setError('');
       })
       .catch((e) => {
@@ -54,9 +59,11 @@ const Login = () => {
           <input type="password" name="password" id="" placeholder='Your Password' required /><br /><br />
           <p className='text-success'>{success}</p>
           <p className='text-danger'>{error}</p>
-          <input className='w-50 mx-auto btn btn-primary' type="submit" value="Login" /><br /><br />
-          <button onClick={handelGoogleLogin} className='btn btn-primary me-3'>Login With Google</button>
-          <button onClick={handelGhihubLogin} className='btn btn-primary'>Login With Github</button> <br /><br />
+          <input className=' mx-auto btn btn-primary' type="submit" value="Login" /><br /><br />
+          <div className='mx-auto'>
+            <button style={{}} onClick={handelGoogleLogin} className='btn btn-primary me-3 '>Login With Google</button>
+            <button style={{}} onClick={handelGhihubLogin} className='btn btn-primary '>Login With Github</button> <br /><br />
+          </div>
           <p>New Here <Link to="/register">Register</Link></p>
         </form>
       </div>
