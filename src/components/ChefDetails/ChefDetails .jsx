@@ -2,18 +2,27 @@
 import { useLoaderData } from 'react-router-dom';
 import './ChefDetails.css'
 import { Button, Card } from 'react-bootstrap';
-import { FaRegThumbsUp } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from 'react';
 
 const ChefDetails = () => {
+  const [disabledButtons, setDisabledButtons] = useState([]);
 
   const details = useLoaderData();
-  const { chef_name, chef_img, short_bio, recipes_name, recipes_img, years_of_experience, number_of_recipes, likes, description, ingredients,cooking_method  , rating } = details;
+  const { id, chef_name, chef_img, short_bio, recipes_name, recipes_img, years_of_experience, number_of_recipes, likes, description, ingredients,cooking_method  , rating } = details;
   console.log(recipes_img);
 
 
   const ingredientElements = ingredients.map((ingredient, index) => (
     <li key={index}>{ingredient}</li>
   ));
+
+  const handleButtonClick = () => {
+    toast.success('Added to favorite');
+    setDisabledButtons([...disabledButtons, id]);
+  };
+  
 
   
 
@@ -50,7 +59,8 @@ const ChefDetails = () => {
               </p>
             </Card.Text>
             <div className="d-flex justify-content-between">
-              <Button variant="primary">Favorite</Button>
+              <Button onClick={handleButtonClick}   disabled={disabledButtons.includes(id)} variant="primary">Favorite</Button>
+              <ToastContainer />
               <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>{rating}</p>
             </div>
           </Card.Body>
@@ -71,7 +81,7 @@ const ChefDetails = () => {
               </p>
             </Card.Text>
             <div className="d-flex justify-content-between">
-              <Button variant="primary">Favorite</Button>
+              <Button onClick={handleButtonClick}  disabled={disabledButtons.includes(id)} variant="primary">Favorite</Button>
               <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-sharp-half"></i>{rating}</p>
             </div>
           </Card.Body>
@@ -91,7 +101,7 @@ const ChefDetails = () => {
               </p>
             </Card.Text>
             <div className="d-flex justify-content-between">
-              <Button variant="primary">Favorite</Button>
+              <Button onClick={handleButtonClick}  disabled={disabledButtons.includes(id)} variant="primary">Favorite</Button>
               <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>{rating}</p>
             </div>
           </Card.Body>
