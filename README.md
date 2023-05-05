@@ -2,6 +2,8 @@
 
 This webpage about the chef's of america
 
+## Live Project: [Project Demo](https://the-chef-s-palette-da479.web.app/)
+
 ## Table of Contents
 
 - [Installation](#installation)
