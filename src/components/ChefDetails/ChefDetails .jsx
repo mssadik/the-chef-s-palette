@@ -7,7 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 
 const ChefDetails = () => {
-  const [disabledButtons, setDisabledButtons] = useState([]);
+  const [buttonDisabled1, setButtonDisabled1] = useState(false);
+  const [buttonDisabled2, setButtonDisabled2] = useState(false);
+  const [buttonDisabled3, setButtonDisabled3] = useState(false);
 
   const details = useLoaderData();
   const { id, chef_name, chef_img, short_bio, recipes_name, recipes_img, years_of_experience, number_of_recipes, likes, description, ingredients,cooking_method  , rating } = details;
@@ -18,9 +20,17 @@ const ChefDetails = () => {
     <li key={index}>{ingredient}</li>
   ));
 
-  const handleButtonClick = () => {
+  const handleButtonClick1 = () => {
     toast.success('Added to favorite');
-    setDisabledButtons([...disabledButtons, id]);
+    setButtonDisabled1(true);
+  };
+  const handleButtonClick2 = () => {
+    toast.success('Added to favorite');
+    setButtonDisabled2(true);
+  };
+  const handleButtonClick3 = () => {
+    toast.success('Added to favorite');
+    setButtonDisabled3(true);
   };
   
 
@@ -59,7 +69,7 @@ const ChefDetails = () => {
               </p>
             </Card.Text>
             <div className="d-flex justify-content-between">
-              <Button onClick={handleButtonClick}   disabled={disabledButtons.includes(id)} variant="primary">Favorite</Button>
+              <Button onClick={handleButtonClick1}    disabled={buttonDisabled1} variant="primary">Favorite</Button>
               <ToastContainer />
               <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>{rating}</p>
             </div>
@@ -81,7 +91,7 @@ const ChefDetails = () => {
               </p>
             </Card.Text>
             <div className="d-flex justify-content-between">
-              <Button onClick={handleButtonClick}  disabled={disabledButtons.includes(id)} variant="primary">Favorite</Button>
+              <Button onClick={handleButtonClick2}    disabled={buttonDisabled2}  variant="primary">Favorite</Button>
               <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-sharp-half"></i>{rating}</p>
             </div>
           </Card.Body>
@@ -101,7 +111,7 @@ const ChefDetails = () => {
               </p>
             </Card.Text>
             <div className="d-flex justify-content-between">
-              <Button onClick={handleButtonClick}  disabled={disabledButtons.includes(id)} variant="primary">Favorite</Button>
+              <Button onClick={handleButtonClick3}    disabled={buttonDisabled3}  variant="primary">Favorite</Button>
               <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>{rating}</p>
             </div>
           </Card.Body>
